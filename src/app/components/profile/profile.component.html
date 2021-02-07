@@ -1,17 +1,29 @@
 <div *ngIf="profile">
   <div class="panel panel-default">
+    <div class="panel-heading">
+      {{profile.name}} <small>({{profile.login}})</small>
+      <span *ngIf="profile.company">, works at {{profile.company}} </span>
+      {{profile.location}}
+    </div>
     <div class="panel-body">
-      <img src="{{profile.avatar_url}} " class="img-circle img-responsive" alt="Profile Image">
-    </div>
-    <div class="col-sm-5">
-      <ul class="list-group">
-        <li class="list-group-item"> {{profile.login}}</li>
-        <li class="list-group-item"> {{profile.name}}</li>
-        <li class="list-group-item"> {{profile.location}}</li>
-        <li class="list-group-item"> {{profile.bio}} </li>
+      <div class="row">
+        <div class="col-sm-3">
+          <img src="{{profile.avatar_url}} " class="img-circle img-responsive" alt="Profile Image">
+        </div>
+        <div class="col-sm-5">
+          <ul class="list-group">
+            <li class="list-group-item"> {{profile.bio}}</li>
+            <li class="list-group-item"> Available for hire </li>
+            <li class="list-group-item"> <a href="{{profile.blog}}" target="_blank"></a> </li>
+            <li class="list-group-item"> {{profile.email}} </li>
 
-      </ul>
+          </ul>
+        </div>
+
+
+      </div>
     </div>
+
 
   </div>
 
