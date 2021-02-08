@@ -13,7 +13,7 @@ export class ProfileService {
 
   constructor(private httpClient:HttpClient) {
 console.log('service is now ready!');
-this.username ='Jackson-coder-arch';
+this.username = 'Jackson-coder-arch';
    }
    getProfileInfo(){
      return this.httpClient.get("https://api.github.com/users/"+this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
@@ -24,6 +24,6 @@ this.username ='Jackson-coder-arch';
      .pipe(map((response: any) => response));
       }
       updateProfile(username:string){
-      this.username =username;
+      this.username = username;
       }
 }
