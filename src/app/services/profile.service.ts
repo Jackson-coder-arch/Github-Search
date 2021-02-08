@@ -19,4 +19,8 @@ this.username ='Jackson-coder-arch';
      return this.httpClient.get("https://api.github.com/users/"+this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
      .pipe(map((response: any) => response));
       }
+      getProfileRepos(){
+        return this.httpClient.get("https://api.github.com/users/"+this.username + "/repos?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
+     .pipe(map((response: any) => response));
+      }
 }
