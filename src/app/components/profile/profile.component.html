@@ -1,3 +1,4 @@
+<h1>Github Search-App</h1>
 <form action="" class="search-from">
   <div class="form-group">
     <input type="text" class="form-control" placefolder="Search git user with username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
@@ -11,11 +12,14 @@
       {{ profile.location }}
     </div>
     <div class="panel-body">
+
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-sm-3">
           <img src="{{ profile.avatar_url }} " class="img-circle" alt="Profile Image" />
         </div>
-        <div class="col-md-5">
+
+
+        <div class="col-sm-5">
           <ul class="list-group">
             <li class="list-group-item">{{ profile.bio }}</li>
             <li class="list-group-item">Available for hire</li>
@@ -27,7 +31,9 @@
             </li>
           </ul>
         </div>
-        <div class="col-md-4">
+
+
+        <div class="col-sm-4">
           <div>
             <p>
               <span class="label-default">
@@ -45,16 +51,18 @@
                 github</a>
             </p>
           </div>
-          <div class="panel-default">
+
+          <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">Repos</h3>
             </div>
             <div class="panel-body" *ngFor="let repo of repos">
               <p class="clearfix">
-                {{ repo.name }}
+
                 <a href=" {{ repo.html_url }} " target="_blank" class="btn btn-sm btn-warning pull-right">View this project on
                   github</a>
-              </p>
+                </p>
+                  <p>{{ repo.name }}</p>
               <p>
                 {{ repo.description }}
               </p>
