@@ -24,6 +24,6 @@ this.username ='Jackson-coder-arch';
      .pipe(map((response: any) => response));
       }
       updateProfile(username:string){
-        this.username =username;
+      this.username =username;
       }
 }
