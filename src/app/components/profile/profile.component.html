@@ -1,6 +1,6 @@
 <form action="" class="search-from">
   <div class="form-group">
-    <input type="text" class="form-control" placefolder="Search git user with username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
+    <input type="text" class="form-control" placefolder="Search git user with username" (ngModel)="username" name="username" (keyup)="findProfile()">
   </div>
 </form>
 <div *ngIf="profile">
