@@ -9,8 +9,14 @@ import { ProfileService } from '../../services/profile.service';
 export class ProfileComponent implements OnInit {
   profile: any ;
   repos: any;
+  username!:string;
 
   constructor(private profileService: ProfileService) {
+
+  }
+
+  findProfile(){
+    this.profileService.updateProfile(this.username);
     this.profileService.getProfileInfo().subscribe( (profile: any) => {
       console.log(profile);
       this.profile = profile;
