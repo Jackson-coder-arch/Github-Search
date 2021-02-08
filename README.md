@@ -1,8 +1,8 @@
 # GithubSearch
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
-
-## Development server
+### This app is to enable the users to search for git repositories and its details.
+### This project was generated with[AngularCLI](https://github.com/angular/angular-cli).
+### BY Jackson Ikonya
+####
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
